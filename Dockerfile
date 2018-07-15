@@ -20,4 +20,6 @@ COPY supervisor.conf /etc/supervisor/conf.d/supervisor.conf
 
 RUN sed -i '/^listen /c listen = 0.0.0.0:9000' /etc/php/7.2/fpm/pool.d/www.conf
 
+EXPOSE 9000
+
 CMD ["/usr/bin/supervisord"]
